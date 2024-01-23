@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{scroll-behavior: smooth}
+
+body {
+	background-color: #F1C7DB;
+	font-family: 'Quicksand',Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 16px;
+	margin: 0
+}
+
+*{box-sizing: border-box}
+.col-1{width: 8.33%}
+.col-2{width: 16.66%}
+.col-3{width: 25%}
+.col-4{width: 33.33%}
+.col-5{width: 41.66%}
+.col-6{width: 50%}
+.col-7{width: 58.33%}
+.col-8{width: 66.66%}
+.col-9{width: 75%}
+.col-10{width: 83.33%}
+.col-11{width: 91.66%}
+.col-12{width: 100%}
+.container{width: 80%; margin: auto}
+[class*="col-"]
+{	border: 0px solid red;
+	padding:15px  }
+.img-100{width: 100%; height: auto}
+.img-75{width:75%; height: auto}
+.img-50{width: 50%; height: auto}
+.img-20{width: 20%; height: auto}
+.row{display: flex; flex-wrap: wrap}
+
+h1 {color: #A31B44;
+	font-family: 'Quicksand',Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 55px}
+h2 {color: #A31B44;
+font-family: 'Quicksand',Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"}
+h3 {color: #A31B44}
+p    {line-height: 1.5rem}
+.text-left {text-align: left}
+.text-center {text-align: center}
+.text-right {text-align: right}
+.align-items-center { align-items: center}
+.align-items-top {align-items: -start}
+.align-items-bottom {align-items: flex-end}
+.justify-center {justify-content: center}
+.justify-star {justify-content: flex-start}
+.justify-end {justify-content: flex-end}
+.justify-between {justify-content: space-between}
+.justify-around {justify-content: space-around}
+.btn-primary { background-color:#DB426D;
+			   color: white;
+			   padding: 10px 20px;
+			   border-radius: 20px;
+			   text-decoration: none;
+			   border: none }
+.btn-primary:hover {background-color:#750C36}
+
+nav {background: #FFFFFF;
+	padding: 0px;
+	box-shadow: 0px 5px 10px rgba(100,0,50,0.5);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999}
+.container {display: flex; 
+				align-items: center; 
+				justify-content: space-between}
+.menu ul {margin:0; 
+		  padding:0; 
+		  list-style:none; 
+		  display: flex; 
+		  justify-content: space-between;
+		  perspective: 100px}
+.menu ul li {position: relative}
+.menu ul li a { padding: 10px 25px;
+				text-decoration: none;
+				color:#DB426D;
+				font-weight: bold;
+				font-size: 1.2 rem;
+				justify-content: space-between}
+.menu ul li a:hover {background:#F1C7DB;
+				     border-bottom: 3px solid #690607}
+.menu ul ul 
+{
+	display: block;
+	background: #FFC0C1;
+	position: absolute; 
+	left: 0; 
+	top: 200%; 
+	transition: all 0.5s;
+	width: 200px; /*Dieu chinh do rong dropdown menu cho no fix, ko phu thuoc menu mẹ*/
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999
+}
+.menu ul li:hover>ul /**/
+{
+	top: 150%; 
+	visibility: visible;
+	opacity: 1
+}
+
+.menu ul ul a /**/
+{
+	display: block;
+	background-color: antiquewhite
+}
+
+
+
+section { padding-top:40px;
+		  padding-bottom:0px}
+
+img { display: block; margin-left: auto;  margin-right: auto}
+
+#banner .item
+{position: relative}
+#banner .item .banner-caption
+{
+	position: absolute;
+	width: 100%;
+	top: 10%;
+	text-align: center
+}
+#banner .item .banner-caption h1
+{margin: 0}
+#banner .item .banner-caption h2
+{margin: 0}
+#banner .item .banner-caption p
+{margin: 40px}
+
+
+#aboutus .container h1 {margin: 0; font-size: 35px} 
+#aboutus .row h2 {margin: 0; font-size: 22px}
+#aboutus .container h3 {margin: 0}
+#aboutus .container p {margin: 0px 0px 0px 10px}
+
+
+#service .container h1 {margin: 0; font-size: 45px} 
+#service .container h2 {margin: 0px 0px 15px 0px; font-size: 25px} 
+
+
+#product .container h1 {margin: 0; font-size: 45px} 
+#product .container h2 {margin: 0px 0px 15px 0px; font-size: 25px} 
+#product
+.card{ position: relative}
+.card p a { transition: all 0.5s; opacity: 0; text-decoration: none; color: #222}
+.card span {transition: all 0.5s; position: absolute; left: 45%; font-size: 2rem; bottom: -5px }
+.card:hover > p a{ opacity: 1}
+.card:hover >span{position: absolute; left: 68%}
+.text-pink {color:#A31B44}
+.text-black {color:#000000}
+#product-infor {margin: 0; padding: 5px 0px 0px 0px}
+#product-infor  .container {background-color: white}
+#product-infor  .container h1 {margin: 0}
+#product-infor  .container h2 {margin: 0; font-size: 30px}
+
+
+#blog .container h1 {margin: 0; font-size: 45px} 
+#blog .container h2 {margin: 0px 0px 15px 0px; font-size: 25px} 
+
+#contact {background-color:antiquewhite; padding: 0}
+
+
+
